@@ -1,4 +1,4 @@
-import { Head, Image } from "mdx-deck";
+import { Head, Split, SplitRight, Image } from "mdx-deck";
 import LiveEdit from "./live-edit.jsx";
 import DemonstrationsDemo from "./demonstrations-demo.jsx";
 
@@ -11,7 +11,7 @@ import DemonstrationsDemo from "./demonstrations-demo.jsx";
   <meta name="twitter:image" content="" />
 </Head>
 
-# Animating with Lottie
+# Animating with Lottie [Add animation]
 
 ---
 
@@ -19,18 +19,24 @@ import DemonstrationsDemo from "./demonstrations-demo.jsx";
 
 ---
 
-# Overview
+# Can we answer the following?
 
-- A brief chat on animations
-- A peek into what's possible with Lottie
-
----
-
-# Animations
+- Why animations and do they matter?
+- What is Lottie?
+- Why consider Lottie?
 
 ---
 
-Animations is for adding context
+# Why animations and why they matter?
+
+---
+
+Animations is for adding context.
+
+Additionally, they
+
+- add delight
+- give character to our application
 
 ---
 
@@ -82,6 +88,8 @@ Can you save the the user time by showing them how something works or how someth
 
 ---
 
+Demo
+
 <DemonstrationsDemo />
 
 ---
@@ -100,6 +108,14 @@ Can you delight the user even when they're just staring at an empty state or a l
 
 # Animate all the things, you say?
 
+---
+
+<Image src="./cat.gif" />
+
+---
+
+# But...
+
 - Does it add additional context to the user?
 - How much value add to the user experience?
 - Have you considered accessbility?
@@ -116,7 +132,18 @@ Can you delight the user even when they're just staring at an empty state or a l
 
 ---
 
-## How it works
+Lottie is a library that parses Adobe After Effects animations exported as JSON. It's available for Android, iOS, Web, React Native, and Windows
+
+---
+
+## What you need
+
+1.  The Bodymovin or LottieFiles Plugin for AfterEffects
+2.  Adobe AfterEffects
+
+---
+
+How does it all work?
 
 ---
 
@@ -125,9 +152,33 @@ Can you delight the user even when they're just staring at an empty state or a l
 ---
 
 - Design in After Effect, use everywhere
-- "use exactly what the designer intended, exactly how it was made" (excerpt from airbnb's blog post)
+- "Use exactly what the designer intended, exactly how it was made" (excerpt from airbnb's blog post)
+- Increased flexiblity
 
 ---
+
+### Design in After Effect, use everywhere
+
+In this reality, we let the motion designers do their thing. And their thing it turns out is Adobe After Effects
+
+---
+
+Demo
+
+---
+
+### "Use exactly what the designer intended, exactly how it was made" (excerpt from airbnb's blog post)
+
+---
+
+Demo
+
+---
+
+### Increased flexiblity
+
+- Universal format
+- Animation playback control
 
 ---
 
@@ -136,6 +187,11 @@ Can you delight the user even when they're just staring at an empty state or a l
 ---
 
 - Performance, performance, performance
+- Doesn't yet support all the features of After Effect
+
+---
+
+For example,
 
 ---
 
