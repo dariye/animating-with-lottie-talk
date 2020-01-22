@@ -1,6 +1,6 @@
-import { Head, Image } from 'mdx-deck'
-import { LiveCode } from 'mdx-deck-live-code'
-import TransitionDemo from './transition-demo.jsx'
+import { Head, Image } from "mdx-deck";
+import LiveEdit from "./live-edit.jsx";
+import DemonstrationsDemo from "./demonstrations-demo.jsx";
 
 <Head>
   <title>Animating with Lottie</title>
@@ -17,18 +17,18 @@ import TransitionDemo from './transition-demo.jsx'
 
 # I'm Paul 👽
 
---- 
+---
 
 # Overview
 
 - A brief chat on animations
 - A peek into what's possible with Lottie
 
---- 
+---
 
 # Animations
 
---- 
+---
 
 Animations is for adding context
 
@@ -44,17 +44,9 @@ Animations is for adding context
 
 Can you tell them where they have been, where they are going and where they are?
 
---- 
-
-<TransitionDemo />
-
 ---
 
-<LiveCode
-  title="How to greet people"
-  size="small"
-  code={require('!raw-loader!./transition-demo.jsx')}
-/>
+<LiveEdit code={`<TransitionDemo />`} />
 
 ---
 
@@ -64,7 +56,9 @@ Can you tell them where they have been, where they are going and where they are?
 
 Can you provide additional or new information regarding the state of the application that provides more context?
 
---- 
+---
+
+<LiveEdit code={`<SupplementsDemo />`} />
 
 ---
 
@@ -76,6 +70,8 @@ What happens when the user interacts with the interface?
 
 ---
 
+<LiveEdit code={`<FeedbackDemo />`} />
+
 ---
 
 ### 4. Demonstrations
@@ -86,19 +82,21 @@ Can you save the the user time by showing them how something works or how someth
 
 ---
 
+<DemonstrationsDemo />
 
---- 
+---
 
 ### 5. Decorative animations
 
 ---
 
-Can you delight the user even when they're just staring at an empty state?
+Can you delight the user even when they're just staring at an empty state or a loading state?
 
 ---
 
+<LiveEdit code={`<DecorativeDemo />`} />
 
---- 
+---
 
 # Animate all the things, you say?
 
@@ -110,17 +108,40 @@ Can you delight the user even when they're just staring at an empty state?
 
 ---
 
-# Say hello, Lottie 
+# Say hello, Lottie
 
 ---
 
+<LiveEdit code={`<Lottie name='busy' width='50%' height='auto' />`} />
 
 ---
 
-## The world that Lottie tries to imagine
+## How it works
 
 ---
 
+## So, what is the future that Lottie is trying to realize?
+
+---
+
+- Design in After Effect, use everywhere
+- "use exactly what the designer intended, exactly how it was made" (excerpt from airbnb's blog post)
+
+---
+
+---
+
+## Are there any drawbacks?
+
+---
+
+- Performance, performance, performance
+
+---
+
+## Recommendations
+
+- Lazy load animated component using react-loadable or something similar
 
 ---
 
@@ -130,7 +151,7 @@ Can you delight the user even when they're just staring at an empty state?
 
 # Thank you
 
---- 
+---
 
 Let's connect:
 
@@ -141,11 +162,8 @@ Let's connect:
 
 Resources
 
+- [Juice it or lose it](https://www.youtube.com/watch?time_continue=7&v=Fy0aCDmgnxg&feature=emb_logo)
+- [Introducing Lottie](https://airbnb.design/introducing-lottie/)
 - [Notes on Animation at Work](https://benrobertson.io/front-end/notes-on-animation-at-work)
 - [Patterns and Purpose, an Excerpt from Animation at Work](https://alistapart.com/article/patterns-and-purpose/)
 - [Animation at Work by Rachel Nabors](https://abookapart.com/products/animation-at-work)
-
-
-
-
-
