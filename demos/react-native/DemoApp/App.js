@@ -41,7 +41,7 @@ export default function App() {
           height: 400,
           backgroundColor: "#eee"
         }}
-        source={require("./assets/animations/empty.json")}
+        source={require("./assets/animations/boy-reading.json")}
       />
       <View>
         <Button title="Restart Animation" onPress={reset} />

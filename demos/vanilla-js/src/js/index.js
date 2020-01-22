@@ -1,5 +1,5 @@
 import lottie from 'lottie-web/build/player/lottie_light'
-import animationData from '../animation/data.json'
+import animationData from '../animations/boy-reading.json'
 let lottieInstance = null
 
 function initLottie (element) {

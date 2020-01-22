@@ -43,7 +43,7 @@ const Lottie = ({
     const init = async () => {
       if (ref && ref.current) {
         const animationData = await import(
-          /* webpackChunkName: "Lottie" */ `./animations/${name}/data.json`
+          /* webpackChunkName: "Lottie" */ `./animations/${name}/.json`
         );
         const options = {
           container: ref.current,
