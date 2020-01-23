@@ -1,9 +1,16 @@
-import { Head, Split, SplitRight, Image } from "mdx-deck";
+import { Head, Notes, Image } from 'mdx-deck'
+import { FullScreenCode, Split, SplitRight} from 'mdx-deck/layouts'
+import {transitionCode} from './transition-demo.jsx'
+import {decorativeCode} from './decorative-demo.jsx'
+import {supplementsCode} from './supplements-demo.jsx'
+import {feedbackCode} from './feedback-demo.jsx'
+import {lottieCode} from './lottie.jsx'
+import {Layout} from './slide.jsx'
 import LiveEdit from "./live-edit.jsx";
-import DemonstrationsDemo from "./demonstrations-demo.jsx";
+
 
 <Head>
-  <title>Animating with Lottie</title>
+  <title>Animating with Lottie 💫</title>
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:site" content="@pauldariye" />
   <meta name="twitter:title" content="Animating with Lottie" />
@@ -11,215 +18,518 @@ import DemonstrationsDemo from "./demonstrations-demo.jsx";
   <meta name="twitter:image" content="" />
 </Head>
 
-# Animating with Lottie [Add animation]
+# Animating with Lottie
 
 ---
 
 # I'm Paul 👽
 
----
+- twitter // @pauldariye
+- github // @pauldariye
 
-# Can we answer the following?
-
-- Why animations and do they matter?
-- What is Lottie?
-- Why consider Lottie?
-
----
-
-# Why animations and why they matter?
+<Notes>
+Howdy! I would like to welcome you all to Pleo.
+My name is Paul.
+I work as a frontend engineer at Pleo. 
+And as you probably already know, Pleo is building the interface for company spending.
+</Notes>
 
 ---
 
-Animations is for adding context.
+# Overview
 
-Additionally, they
+- On animations
+- Animating with Lottie
 
-- add delight
-- give character to our application
-
----
-
-## Animation patterns
+<Notes>
+Today’s talk is about animations. Specifically, animating with a not-so-new-kid-on-the-block, Lottie. 
+</Notes>
 
 ---
 
-### 1. Transitions
+✋🏼✋✋🏾✋🏻✋🏽✋🏿
+
+<Notes>
+Just for a show of hands, how many of you have implemented an animation on the frontend (can be CSS transitions, SVG animations, etc?
+How many of you have heard of Lottie before today? How many of you have used Lottie?
+</Notes>
 
 ---
 
-Can you tell them where they have been, where they are going and where they are?
+❓
 
 ---
 
-<LiveEdit code={`<TransitionDemo />`} />
+<Layout>Animations are great because they provide additional context for our users,</Layout>
 
 ---
 
-### 2. Supplements
+<Layout>...in hopefully ways that are delightful and meaningful.</Layout>
 
 ---
 
-Can you provide additional or new information regarding the state of the application that provides more context?
+<Layout>...they add a body language to your product that users can be at ease with and give your brand character.</Layout>
+
+<Notes>
+Think about those micro interactions in your favorite app. For example when you get a like on Tinder
+</Notes>
 
 ---
 
-<LiveEdit code={`<SupplementsDemo />`} />
+Animation patterns
+
+- Transitions
+- Supplements
+- Feedback
+- Demonstrations
+- Decorations
+
+<Notes>
+Rachel Nabors breaks this down from her book Animation at Work.
+</Notes>
 
 ---
 
-### 3. Feedback
+## Transitions
 
 ---
 
-What happens when the user interacts with the interface?
+<Layout>Can you tell users where they have been, where they are going and where they are?</Layout>
 
 ---
 
-<LiveEdit code={`<FeedbackDemo />`} />
+<LiveEdit code={transitionCode} noInline />
 
 ---
 
-### 4. Demonstrations
+# Supplements
 
 ---
 
-Can you save the the user time by showing them how something works or how something is done instead of telling them?
+<Layout>Can you provide additional or new information regarding the state of the application that provides more context?</Layout>
 
 ---
 
-Demo
-
-<DemonstrationsDemo />
+<LiveEdit code={supplementsCode} noInline />
 
 ---
 
-### 5. Decorative animations
+# Feedback
 
 ---
 
-Can you delight the user even when they're just staring at an empty state or a loading state?
+<Layout>What happens when the user interacts with the interface?</Layout>
 
 ---
 
-<LiveEdit code={`<DecorativeDemo />`} />
+<LiveEdit code={feedbackCode} noInline />
 
 ---
 
-# Animate all the things, you say?
+# Demonstrations
 
 ---
 
-<Image src="./cat.gif" />
+<Layout>Can you save the the user time by showing them how something works or how something is done instead of telling them?</Layout>
 
 ---
 
-# But...
+<FullScreenCode>
+{/* <Image src="static/illustration.svg" size="100%" /> */}
+</FullScreenCode>
+
+<Notes>
+I used a tool called Termtosvg to generate this one and..
+
+(If you’re curious, the others were created with react-spring)
+</Notes>
+
+Remember this?
+
+---
+
+<Image src="static/twitter-heart.gif" size="500px" />
+
+---
+
+<Layout>If you're like me, you're probably going like wahhht...</Layout>
+
+---
+
+<Image src="static/cute-cat.gif" size="500px" />
+
+---
+
+
+# A simple fact
+
+---
+
+# 💣
+
+---
+
+Implementing animations can be a colossal PITA.
+
+<Notes>
+  And yes, even though we’re still in the 21st century and have some amazing technology, it is still time consuming to come up with animations that are smooth and performant (and sensible). Tools like Adobe After Effect make it a lot more accessible for anyone who can afford the software and manage to spend enough time with it to create truly amazing pieces.
+
+ So what happens when we want to bring these amazing animations to life? What happens when we’re tasked to bring these delightful experiences and visuals into our apps and websites?
+</Notes>
+
+---
+
+<Layout>...like most things, it depends</Layout>
+
+--- 
+
+<Image src="static/css-transition.gif" size="500px"/>
+
+<Notes>
+What runs through your mind when your designer presents you with an animation like this implement?
+</Notes>
+
+---
+
+# JS + HTML + CSS
+
+<Notes>
+This is a React meetup, so I imagine that most people are familiar with JavaScript, HTML, and CSS.
+</Notes>
+
+---
+
+<Image src="static/boy-reading.gif" size="500px"/>
+
+<Notes>
+  However, how do you implement this if you were to code it up?
+</Notes>
+
+---
+
+# 🤯 
+
+<Notes>
+Possible?
+</Notes>
+
+---
+
+Can you answer these?
 
 - Does it add additional context to the user?
 - How much value add to the user experience?
-- Have you considered accessbility?
-- How do you share animations across platforms?
+- Have you considered accessibility?
+- How does it impact performance?
+- Do you need these animations across platforms?
 - How long will it take you to implement it?
 
----
-
-# Say hello, Lottie
-
----
-
-<LiveEdit code={`<Lottie name='busy' width='50%' height='auto' />`} />
+<Notes>
+- As stewards of the interface of technology, maybe we should always start by asking why?
+- These are only a few questions you can ask to know if its worth investing the time to implement the animation. Once you have a satisfactory answer you can venture into the next step. 
+</Notes>
 
 ---
 
-Lottie is a library that parses Adobe After Effects animations exported as JSON. It's available for Android, iOS, Web, React Native, and Windows
+# Say hello, Lottie!
+
+<Notes>
+Lottie is a library created by Airbnb that parses Adobe After Effects animations exported as JSON. It uses a plugin called Bodymovin created Hernan Torrisi. 
+</Notes>
 
 ---
 
-## What you need
+# 👩🏼‍🏭
 
-1.  The Bodymovin or LottieFiles Plugin for AfterEffects
-2.  Adobe AfterEffects
+Named after (Char)Lotte Reiniger
 
----
-
-How does it all work?
-
----
-
-## So, what is the future that Lottie is trying to realize?
+<Notes>
+Fun fact, Lottie is named after (Char)Lotte Reiniger, a pioneer of silhouette animation. She created the first full-length animated film titled the Adventures of Prince Achmed created in 1923 and 1926. You can check out the documentary the Art of Lotte Reiniger on Youtube. 
+</Notes>
 
 ---
 
+<FullScreenCode>
+<Image src="static/adventures-of-achmed.gif" />
+</FullScreenCode>
+
+<Notes>
+  Silhouette films are notoriously challenging to make (I would know, I’ve never made one). Back in Lotte Reiniger’s days, characters had to be cutout by hand and individuals frames photographed. There was tremendous effort going into making these cardboard cutouts life-like characteristics. 
+</Notes>
+
+---
+
+<Layout>Lottie makes it 🤬 easy to add these beautiful animations on 🍎 (iOS) 🤖 (Android), 🖥 (windows), and 🌏 (web).</Layout>
+
+---
+
+<LiveEdit code={`<Lottie name='pop-one' width='50%' height='auto' style={{backgroundColor: 'black'}}/>`} />
+
+<Notes>
+  Something "simple" your motion designer came up with to make the reaction of the button "pop"
+</Notes>
+
+---
+
+<LiveEdit code={`<Lottie name='pop-two' width='50%' height='auto' style={{backgroundColor: 'black'}}/>`} />
+
+<Notes>
+A "subtle" variant
+</Notes>
+
+---
+
+You need three things:
+
+- Adobe After Effects
+- LottieFiles plugin
+- Lottie library
+
+<Notes>
+Or Bodymovin by Hernan Torrisi
+
+Trust me, you probably want to leave designing/creating the animation to your motion designer. Here’s what I came up with when I gave it a try.
+
+Do you want to see what I came up with in 30 minutes?
+</Notes>
+
+---
+
+<LiveEdit code={`<Lottie name='howdy' width='50%' height='auto' style={{backgroundColor: 'black'}}/>`} />
+
+<Notes>
+Something like this is simple enough to achieve with just CSS transitions and transforms.
+</Notes>
+
+---
+
+<Layout>How do these three tools all tie together into a workflow?</Layout>
+
+<Notes>
+Jump into Adobe After Effects 
+
+- Show Howdy! composition
+- Show Pop compositions
+
+So, like Lotte Reiniger spending quite a lot of time creating her masterpieces, our motion designer spends countless hours ensuring that Pleo can communicate in a more delightful and approachable way to our users, potential users, and to the world. 
+</Notes>
+
+---
+
+<Layout>My job, like yours, is to make these experiences accessible to users where they are.</Layout> 
+
+--- 
+
+<Layout>What you get by using Lottie?</Layout>
+
+<Notes>
 - Design in After Effect, use everywhere
 - "Use exactly what the designer intended, exactly how it was made" (excerpt from airbnb's blog post)
-- Increased flexiblity
+- Increased flexibility and malleability of animation objects
+
+</Notes>
 
 ---
 
-### Design in After Effect, use everywhere
-
-In this reality, we let the motion designers do their thing. And their thing it turns out is Adobe After Effects
+# Design in After Effect, use everywhere
 
 ---
 
-Demo
+# Use exactly what the designer intended, exactly how it was made
 
 ---
 
-### "Use exactly what the designer intended, exactly how it was made" (excerpt from airbnb's blog post)
+# Increased flexibility and malleability of animation objects
 
 ---
 
-Demo
+Lottie has a pretty aggressive list of features
 
 ---
 
-### Increased flexiblity
+<div style={{width: '100vw', height: '100vh', overflow: 'auto'}}>
 
-- Universal format
-- Animation playback control
+# Supported Features
+
+| **Shapes** | **Android** | **iOS** | **Windows** | **Web (SVG)** | **Web (Canvas)** | **Web (HTML)** |
+|:--|:-:|:-:|:-:|:-:|:-:|:-:|
+| Shape |                         👍 | 👍 | 👍 | 👍 | 👍 | 👍 |
+| Ellipse |                       👍 | 👍 | 👍 | 👍 | 👍 | 👍 |
+| Rectangle |                     👍 | 👍 | 👍 | 👍 | 👍 | 👍 |
+| Rounded Rectangle |             👍 | 👍 | 👍 | 👍 | 👍 | 👍 |
+| Polystar |                      👍 | 👍 | ️️️️️️️️⛔️ | 👍 | 👍 | 👍 |
+| Group |                         👍 | 👍 | 👍 | 👍 | 👍 | 👍 |
+| Repeater |                      👍 | ⛔️ | 👍 | 👍 | 👍 | 👍 |
+| Trim Path (individually) |      👍 | 👍 | ️️️️️️️️⛔️ | 👍 | 👍 | 👍 |
+| Trim Path (simultaneously) |    👍 | 👍 | 👍 | 👍 | 👍 | 👍 |
+| **Fills** | **Android** | **iOS** | **Windows** | **Web (SVG)** | **Web (Canvas)** | **Web (HTML)** |
+| Color |                         👍 | 👍 | 👍 | 👍 | 👍 | 👍 |
+| Opacity |                       👍 | 👍 | 👍 | 👍 | 👍 | 👍 |
+| Fill Rule |                     👍 | 👍 | 👍 | 👍 | 👍 | 👍 |
+| Radial Gradient |               👍 | 👍 | ️️️️️️️️👍 | 👍 | 👍 | 👍 |
+| Linear Gradient |               👍 | 👍 | ️️️️️️️️👍 | 👍 | 👍 | 👍 |
+| **Strokes** | **Android** | **iOS** | **Windows** | **Web (SVG)** | **Web (Canvas)** | **Web (HTML)** |
+| Color |                         👍 | 👍 | 👍 | 👍 | 👍 | 👍 |
+| Opacity |                       👍 | 👍 | 👍 | 👍 | 👍 | 👍 |
+| Width |                         👍 | 👍 | 👍 | 👍 | 👍 | 👍 |
+| Line Cap |                      👍 | 👍 | 👍 | 👍 | 👍 | 👍 |
+| Line Join |                     👍 | 👍 | 👍 | 👍 | 👍 | 👍 |
+| Miter Limit |                   👍 | 👍 | 👍 | 👍 | 👍 | 👍 |
+| Dashes |                        👍 | 👍 | 👍 | 👍 | 👍 | 👍 |
+| Gradient |                      👍 | ️️️️️️️️👍 | ️️️️️️️️⛔️ | 👍 | 👍 | 👍 |
+| **Transforms** | **Android** | **iOS** | **Windows** | **Web (SVG)** | **Web (Canvas)** | **Web (HTML)** |
+| Position |                      👍 | 👍 | 👍 | 👍 | 👍 | 👍 |
+| Position (separated X/Y) |      👍 | 👍 | 👍 | 👍 | 👍 | 👍 |
+| Scale |                         👍 | 👍 | 👍 | 👍 | 👍 | 👍 |
+| Rotation |                      👍 | 👍 | 👍 | 👍 | 👍 | 👍 |
+| Anchor Point |                  👍 | 👍 | 👍 | 👍 | 👍 | 👍 |
+| Opacity |                       👍 | 👍 | 👍 | 👍 | 👍 | 👍 |
+| Parenting |                     👍 | 👍 | 👍 | 👍 | 👍 | 👍 |
+| Auto Orient |                   ⛔️ | ⛔️ | ⛔️ | 👍 | 👍 | 👍 |
+| Skew |                          ❓ | 👍 | ❓ | 👍 | 👍 | 👍 |
+| **Interpolation** | **Android** | **iOS** | **Windows** | **Web (SVG)** | **Web (Canvas)** | **Web (HTML)** |
+| Linear Interpolation |          👍 | 👍 | 👍 | 👍 | 👍 | 👍 |
+| Bezier Interpolation |          👍 | 👍 | 👍 | 👍 | 👍 | 👍 |
+| Hold Interpolation |            👍 | 👍 | 👍 | 👍 | 👍 | 👍 |
+| Spatial Bezier Interpolation |  👍 | 👍 | 👍 | 👍 | 👍 | 👍 |
+| Rove Across Time |              👍 | 👍 | 👍 | 👍 | 👍 | 👍 |
+| **Masks** | **Android** | **iOS** | **Windows** | **Web (SVG)** | **Web (Canvas)** | **Web (HTML)** |
+| Mask Path |                     👍 | 👍 | 👍 | 👍 | 👍 | 👍 |
+| Mask Opacity |                  👍 | 👍 | 👍 | 👍 | 👍 | 👍 |
+| Add |                           👍 | 👍 | 👍 | 👍 | 👍 | 👍 |
+| Subtract |                      👍 | 👍 | 👍 | 👍 | 👍 | 👍 |
+| Intersect |                     👍 | 👍 | ⛔️ | ️⛔ | ⛔ | ⛔ |
+| Lighten |                       ⛔️ | ⛔️ | ⛔️ | ⛔️ | ⛔ | ⛔ |
+| Darken |                        ⛔️ | ⛔️ | ⛔️ | ⛔️ | ⛔ | ⛔ |
+| Difference |                    ⛔️ | ⛔️ | ⛔️ | ⛔️ | ⛔ | ⛔ |
+| Expansion |                     ⛔️ | ⛔️ | ⛔️ | ⛔️ | 👍 | 👍 |
+| Feather |                       ⛔️ | ⛔️ | ⛔️ | ⛔️ | ⛔ | ⛔ |
+| **Mattes** | **Android** | **iOS** | **Windows** | **Web (SVG)** | **Web (Canvas)** | **Web (HTML)** |
+| Alpha Matte |                   👍 | 👍 | 👍 | 👍 | ⛔️ | 👍 |
+| Alpha Inverted Matte |          👍 | 👍 | ⛔️ | 👍 | 👍 | 👍 |
+| Luma Matte |                    ⛔️ | ⛔️ | ⛔️ | ❔ | ❔ | ❔ |
+| Luma Inverted Matte |           ⛔️ | ⛔️ | ⛔️ | ❔ | ❔ | ❔ |
+| **Merge Paths** | **Android** | **iOS** | **Windows** | **Web (SVG)** | **Web (Canvas)** | **Web (HTML)** |
+| Merge |                         👍 (KitKat+) | ⛔ | 👍 | ⛔ | ⛔ | ⛔ |
+| Add |                           👍 (KitKat+) | ⛔ | 👍 | ⛔ | ⛔ | ⛔ |
+| Subtract |                      👍 (KitKat+) | ⛔ | 👍 | ⛔ | ⛔ | ⛔ |
+| Intersect |                     👍 (KitKat+) | ⛔ | 👍 | ⛔ | ⛔ | ⛔ |
+| Exclude Intersection |          👍 (KitKat+) | ⛔ | 👍 | ⛔ | ⛔ | ⛔ |
+| **Layer Effects** | **Android** | **iOS** | **Windows** | **Web (SVG)** | **Web (Canvas)** | **Web (HTML)** |
+| Fill |                          ⛔️ | ⛔️ | ⛔️ | 👍 | 👍 | 👍 |
+| Stroke |                        ⛔️ | ⛔️ | ⛔️ | 👍 | 👍 | 👍 |
+| Tint |                          ⛔️ | ⛔️ | ⛔️ | 👍 | 👍 | 👍 |
+| Tritone |                       ⛔️ | ⛔️ | ⛔️ | 👍 | 👍 | 👍 |
+| Levels Individual Controls |    ⛔️ | ⛔️ | ⛔️ | 👍 | 👍 | 👍 |
+| **Text** | **Android** | **iOS** | **Windows** | **Web (SVG)** | **Web (Canvas)** | **Web (HTML)** |
+| Glyphs |                        👍 | ⛔️ | ⛔️ | 👍 | 👍 | 👍 |
+| Fonts |                         👍 | 👍 | ⛔️ | 👍 | 👍 | 👍 |
+| Transform |                     👍 | 👍 | ⛔️ | 👍 | 👍 | 👍 |
+| Fill |                          👍 | 👍 | ⛔️ | 👍 | 👍 | 👍 |
+| Stroke |                        👍 | 👍 | ⛔️ | 👍 | 👍 | 👍 |
+| Tracking |                      👍 | 👍 | ⛔️ | 👍 | 👍 | 👍 |
+| Anchor point grouping |         ⛔️ | ⛔️ | ⛔️ | 👍 | 👍 | 👍 |
+| Text Path |                     ⛔️ | ⛔️ | ⛔️ | 👍 | 👍 | 👍 |
+| Per-character 3D |              ⛔️ | ⛔️ | ⛔️ | 👍 | 👍 | 👍 |
+| Range selector (Units) |        ⛔️ | ⛔️ | ⛔️ | 👍 | 👍 | 👍 |
+| Range selector (Based on) |     ⛔️ | ⛔️ | ⛔️ | 👍 | 👍 | 👍 |
+| Range selector (Amount) |       ⛔️ | ⛔️ | ⛔️ | 👍 | 👍 | 👍 |
+| Range selector (Shape) |        ⛔️ | ⛔️ | ⛔️ | 👍 | 👍 | 👍 |
+| Range selector (Ease High) |    ⛔️ | ⛔️ | ⛔️ | 👍 | 👍 | 👍 |
+| Range selector (Ease Low)  |    ⛔️ | ⛔️ | ⛔️ | 👍 | 👍 | 👍 |
+| Range selector (Randomize order) | ⛔️ | ⛔️ | ⛔️ | 👍 | 👍 | 👍 |
+| expression selector |           ⛔️ | ⛔️ | ⛔️ | 👍 | 👍 | 👍 |
+| **Other** | **Android** | **iOS** | **Windows** | **Web (SVG)** | **Web (Canvas)** | **Web (HTML)** |
+| Expressions |                   ⛔️ | ⛔️ | ⛔️ | 👍 | 👍 | 👍 |
+| Images |                        👍 | 👍 | ❔ | 👍 | 👍 | 👍 |
+| Precomps |                      👍 | 👍 | 👍 | 👍 | 👍 | 👍 |
+| Time Stretch |                  👍 | 👍 | ⛔️ | 👍 | 👍 | 👍 |
+| Time remap |                    👍 | 👍 | ⛔️ | 👍 | 👍 | 👍 |
+| Markers |                    👍 | 👍 | ⛔️ | 👍 | 👍 | 👍 |
+</div>
 
 ---
 
-## Are there any drawbacks?
+<Layout>Lottie gives you some powerful controls and access animation frames</Layout>
 
 ---
+
+<LiveEdit code={`<Lottie name='pop-one' width='50%' height='auto' style={{backgroundColor: 'black'}}/>`} />
+
+<Notes>
+ The API allows you to do the following: 
+- Example with React Native
+- Example with Vanillajs 
+- Remember these slides are in React!
+</Notes>
+
+---
+
+Also, toolings FTW! 🔥
+
+- [You can preview your lottie animations](https://lottiefiles.com/preview)
+- [You can debug your lottie JSON](https://lottiefiles.com/tools/json-editor)
+- [You can try the online editor](https://lottiefiles.com/editor)
+
+---
+
+<Layout>
+In the end, you get to focus on the user’s interaction with the interface,
+</Layout>
+
+---
+
+<Layout>...and react accordingly with the visuals that add delight and joy 💅</Layout>
+
+<Notes>
+In the end though, you’re not messing with anything you’re not familiar with, example figuring out durations, timings, etc. You get to focus on the user’s interaction with the interface, and react accordingly (no pun intended) with the visuals that add delight and joy.
+</Notes>
+
+---
+
+
+# 🌹 
+
+
+---
+
+✂️ 🌹 
 
 - Performance, performance, performance
-- Doesn't yet support all the features of After Effect
+- Doesn't yet support all the features of Adobe After Effect
+- Debugging can be challenging
 
 ---
 
-For example,
+<Image src="static/with-great-power-gif.gif" size="90%" />
+
+<Notes>
+So, I hope I’ve sold you on why you should at least give Lottie a try if you aren’t already doing so.
+</Notes>
 
 ---
 
-## Recommendations
+To summarize,
 
-- Lazy load animated component using react-loadable or something similar
-
----
-
-# Questions?
-
----
-
-# Thank you
+- Use animations to add additional context
+- Use  animations to delight your users
+- Use animations to give your product a body language
+- Use animations to give your brand character
+- Use animations only when it makes sense
 
 ---
 
-Let's connect:
+Lottie can help you with all of these and more!
 
-- twitter.com/@pauldariye
-- paul@pleo.io
+--- 
+
+Questions?
+
+<Notes>
+Thank you very much for listening; I’m happy to answer any questions now otherwise you can tweet @pauldariye and you can also find all the examples and slides on GitHub @pauldariye 
+</Notes>
 
 ---
 
-Resources
+tweet @pauldariye
 
-- [Juice it or lose it](https://www.youtube.com/watch?time_continue=7&v=Fy0aCDmgnxg&feature=emb_logo)
-- [Introducing Lottie](https://airbnb.design/introducing-lottie/)
-- [Notes on Animation at Work](https://benrobertson.io/front-end/notes-on-animation-at-work)
-- [Patterns and Purpose, an Excerpt from Animation at Work](https://alistapart.com/article/patterns-and-purpose/)
-- [Animation at Work by Rachel Nabors](https://abookapart.com/products/animation-at-work)

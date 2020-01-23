@@ -1,9 +1,12 @@
 import React, { useRef, useEffect } from "react";
 import { StyleSheet, Button, View } from "react-native";
 import LottieView from "lottie-react-native";
+const boyReading = require("./assets/animations/boy-reading.json");
+const dogWalking = require("./assets/animations/dog.json");
 
 export default function App() {
   const anim = useRef(null);
+  const [isAnimating, setIsAnimating] = useState(true);
 
   const destroy = () => {
     if (anim && anim.current) {
@@ -12,26 +15,33 @@ export default function App() {
     }
   };
 
-  const reset = () => {
-    if (anim.current) {
-      anim.current.reset();
-      anim.current.play();
+  // const reset = () => {
+  //   if (anim && anim.current) {
+  //     anim.current.reset();
+  //     anim.current.play();
+  //   }
+  // };
+
+  const play = () => {
+    if (anim && anim.current) {
+      setIsAnimating(!isAnimating);
+    }
+  };
+
+  const stop = () => {
+    if (anim && anim.current) {
+      anim.current.stop();
     }
   };
 
   useEffect(() => {
-    const init = async () => {
-      if (anim && anim.current) {
-        anim.current.play();
-      }
-    };
-
-    init();
-
+    if (anim && anim.current && isAnimating) {
+      anim.current.play();
+    }
     return function cleanup() {
       destroy();
     };
-  }, []);
+  }, [isAnimating]);
   return (
     <View style={styles.container}>
       <LottieView
@@ -41,10 +51,11 @@ export default function App() {
           height: 400,
           backgroundColor: "#eee"
         }}
-        source={require("./assets/animations/boy-reading.json")}
+        source={require("./assets/animations/dog.json")}
       />
       <View>
-        <Button title="Restart Animation" onPress={reset} />
+        <Button title="⏯" onPress={play} />
+        <Button title="⏺" onPress={stop} />
       </View>
     </View>
   );

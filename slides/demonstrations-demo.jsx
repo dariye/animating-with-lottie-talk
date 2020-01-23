@@ -1,5 +1,5 @@
 import React from "react";
-import illustration from "./illustration.svg";
+// import illustration from "./static/illustration.svg";
 const Demo = () => <img src={illustration} alt="" />;
 
 export default Demo;
