@@ -7,10 +7,6 @@ const Demo = () => {
     if (!animating) {
       setAnimating(true);
     }
-
-    return function cleanup() {
-      setAnimating(false);
-    };
   }, [animating]);
 
   const props = useSpring({
