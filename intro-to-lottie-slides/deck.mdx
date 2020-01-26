@@ -1,5 +1,5 @@
-import { Head, Notes, Image } from 'mdx-deck'
-import { FullScreenCode, Split, SplitRight} from 'mdx-deck/layouts'
+import { Head, Notes, Image,FullScreenCode, Split, SplitRight } from 'mdx-deck'
+
 import {transitionCode} from './transition-demo.jsx'
 import {decorativeCode} from './decorative-demo.jsx'
 import {supplementsCode} from './supplements-demo.jsx'
@@ -22,8 +22,6 @@ import LiveEdit from "./live-edit.jsx";
 # React Copenhagen Meetup
 
 January 23, 2020
-- network: Pleo Guest
-- password: twinklethorn
 
 ---
 
@@ -49,18 +47,9 @@ And as you probably already know, Pleo is building the interface for company spe
 - On animations
 - Animating with Lottie
 
-<Notes>
-Today’s talk is about animations. Specifically, animating with a not-so-new-kid-on-the-block, Lottie. 
-</Notes>
-
 ---
 
 ✋🏼✋✋🏾✋🏻✋🏽✋🏿
-
-<Notes>
-Just for a show of hands, how many of you have implemented an animation on the frontend (can be CSS transitions, SVG animations, etc?
-How many of you have heard of Lottie before today? How many of you have used Lottie?
-</Notes>
 
 ---
 
@@ -183,12 +172,6 @@ Remember this?
 
 Implementing animations can be a colossal PITA.
 
-<Notes>
-  And yes, even though we’re still in the 21st century and have some amazing technology, it is still time consuming to come up with animations that are smooth and performant (and sensible). Tools like Adobe After Effect make it a lot more accessible for anyone who can afford the software and manage to spend enough time with it to create truly amazing pieces.
-
- So what happens when we want to bring these amazing animations to life? What happens when we’re tasked to bring these delightful experiences and visuals into our apps and websites?
-</Notes>
-
 ---
 
 <Layout>...like most things, it depends</Layout>
@@ -197,25 +180,13 @@ Implementing animations can be a colossal PITA.
 
 <Image src="static/css-transition.gif" size="500px"/>
 
-<Notes>
-What runs through your mind when your designer presents you with an animation like this implement?
-</Notes>
-
 ---
 
 # JS + HTML + CSS
 
-<Notes>
-This is a React meetup, so I imagine that most people are familiar with JavaScript, HTML, and CSS.
-</Notes>
-
 ---
 
 <Image src="static/boy-reading.gif" size="500px"/>
-
-<Notes>
-  However, how do you implement this if you were to code it up?
-</Notes>
 
 ---
 
@@ -236,11 +207,6 @@ Can you answer these?
 - Do you need these animations across platforms?
 - How long will it take you to implement it?
 
-<Notes>
-- As stewards of the interface of technology, maybe we should always start by asking why?
-- These are only a few questions you can ask to know if its worth investing the time to implement the animation. Once you have a satisfactory answer you can venture into the next step. 
-</Notes>
-
 ---
 
 # Say hello, Lottie!
@@ -256,7 +222,7 @@ Lottie is a library created by Airbnb that parses Adobe After Effects animations
 Named after (Char)Lotte Reiniger
 
 <Notes>
-Fun fact, Lottie is named after (Char)Lotte Reiniger, a pioneer of silhouette animation. She created the first full-length animated film titled the Adventures of Prince Achmed created in 1923 and 1926. You can check out the documentary the Art of Lotte Reiniger on Youtube. 
+Lottie is named after (Char)Lotte Reiniger, a pioneer of silhouette animation. She created the first full-length animated film titled the Adventures of Prince Achmed created in 1923 and 1926. You can check out the documentary the Art of Lotte Reiniger on Youtube. 
 </Notes>
 
 ---
@@ -298,33 +264,16 @@ You need three things:
 - Lottie library
 
 <Notes>
-Or Bodymovin by Hernan Torrisi
-
-Trust me, you probably want to leave designing/creating the animation to your motion designer. Here’s what I came up with when I gave it a try.
-
-Do you want to see what I came up with in 30 minutes?
+Bodymovin by Hernan Torrisi
 </Notes>
 
 ---
 
 <LiveEdit code={`<Lottie name='howdy' width='50%' height='auto' style={{backgroundColor: 'black'}}/>`} />
 
-<Notes>
-Something like this is simple enough to achieve with just CSS transitions and transforms.
-</Notes>
-
 ---
 
 <Layout>How do these three tools all tie together into a workflow?</Layout>
-
-<Notes>
-Jump into Adobe After Effects 
-
-- Show Howdy! composition
-- Show Pop compositions
-
-So, like Lotte Reiniger spending quite a lot of time creating her masterpieces, our motion designer spends countless hours ensuring that Pleo can communicate in a more delightful and approachable way to our users, potential users, and to the world. 
-</Notes>
 
 ---
 
@@ -333,13 +282,6 @@ So, like Lotte Reiniger spending quite a lot of time creating her masterpieces, 
 --- 
 
 <Layout>What you get by using Lottie?</Layout>
-
-<Notes>
-- Design in After Effect, use everywhere
-- "Use exactly what the designer intended, exactly how it was made" (excerpt from airbnb's blog post)
-- Increased flexibility and malleability of animation objects
-
-</Notes>
 
 ---
 
@@ -545,3 +487,15 @@ Thank you very much for listening; I’m happy to answer any questions now other
 
 Thank you
 
+--- 
+
+<Layout>
+Resources
+
+- [Juice it or lose it](https://www.youtube.com/watch?time_continue=7&v=Fy0aCDmgnxg&feature=emb_logo)
+- [Introducing Lottie](https://airbnb.design/introducing-lottie/)
+- [Notes on Animation at Work](https://benrobertson.io/front-end/notes-on-animation-at-work)
+- [Patterns and Purpose, an Excerpt from Animation at Work](https://alistapart.com/article/patterns-and-purpose/)
+- [Animation at Work by Rachel Nabors](https://abookapart.com/products/animation-at-work)
+
+</Layout>

@@ -1,5 +1,5 @@
 import React from "react";
-import { FullScreenCode } from "mdx-deck/layouts";
+import { FullScreenCode } from "mdx-deck";
 import styled, { css } from "styled-components";
 import * as polished from "polished";
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from "react-live";
